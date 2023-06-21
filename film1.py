@@ -23,12 +23,12 @@ class Films1App(tk.Tk):
         label.place(x=110, y=95)
 
         # Afbeelding film
-        film1Image = Image.open("afbeeldingen/film1.png")
-        resized_film1Image = film1Image.resize((200, 300))  # Resize the image
-        self.film1Photo = ImageTk.PhotoImage(resized_film1Image)
-        film1Label = tk.Label(self, image=self.film1Photo)
-        film1Label.config(borderwidth=0)
-        film1Label.place(x=150, y=160)
+        film1Image = Image.open("afbeeldingen/film1.png")  # Opent het beeldbestand "afbeeldingen/film1.png"
+        resized_film1Image = film1Image.resize((200, 300))  # Verkleint de afbeelding
+        self.film1Photo = ImageTk.PhotoImage(resized_film1Image)  # Maakt een PhotoImage-object van de verkleinde afbeelding
+        film1Label = tk.Label(self, image=self.film1Photo)  # Maakt een Label-widget met de afbeelding
+        film1Label.config(borderwidth=0)  # Stelt de randbreedte van het label in op 0
+        film1Label.place(x=150, y=160)  # Plaatst het label op de gewenste positie
 
         # Tekst
         label = tk.Label(self, text="Duration: 135 Minutes", background="#4942E4", foreground="#fcffff",

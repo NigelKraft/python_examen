@@ -19,16 +19,17 @@ class Films3App(tk.Tk):
         self.bgLabel.place(x=0, y=0)
 
         # Titel
-        label = tk.Label(self, text="Fast X", background="#2E2C2B", foreground="#fcffff", font=("Ariel", 22, "bold"))
+        label = tk.Label(self, text="Fast X", background="#2E2C2B", foreground="#fcffff",
+                         font=("Ariel", 22, "bold"))
         label.place(x=200, y=100)
 
         # Afbeelding film
-        filmImage = Image.open("afbeeldingen/film3.png")
-        resizedFilmImage = filmImage.resize((200, 300))
-        self.filmPhoto = ImageTk.PhotoImage(resizedFilmImage)
-        filmLabel = tk.Label(self, image=self.filmPhoto)
-        filmLabel.config(borderwidth=0)
-        filmLabel.place(x=150, y=160)
+        filmImage = Image.open("afbeeldingen/film3.png")  # Opent het beeldbestand "afbeeldingen/film3.png"
+        resizedFilmImage = filmImage.resize((200, 300))  # Verkleint de afbeelding
+        self.filmPhoto = ImageTk.PhotoImage(resizedFilmImage)  # Maakt een PhotoImage-object van de verkleinde afbeelding
+        filmLabel = tk.Label(self, image=self.filmPhoto)  # Maakt een Label-widget met de afbeelding
+        filmLabel.config(borderwidth=0)  # Stelt de randbreedte van het label in op 0
+        filmLabel.place(x=150, y=160)  # Plaatst het label op de gewenste positie
 
         # Tekst
         label = tk.Label(self, text="Duration: 141 Minutes", background="#2E2C2B", foreground="#fcffff",

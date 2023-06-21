@@ -25,22 +25,22 @@ class FilmsApp(tk.Tk):
         label.place(x=160, y=75)
 
         # Films
-        film1Image = Image.open("afbeeldingen/film1.png")
-        resized_film1Image = film1Image.resize((179, 254))  # Resize the image
-        self.film1Photo = ImageTk.PhotoImage(resized_film1Image)
-        film1Label = tk.Label(self, image=self.film1Photo)
-        film1Label.config(borderwidth=0)
-        film1Label.place(x=165, y=180)
+        film1Image = Image.open("afbeeldingen/film1.png")  # Opent het beeldbestand "afbeeldingen/film1.png"
+        resized_film1Image = film1Image.resize((179, 254))  # Verkleint de afbeelding
+        self.film1Photo = ImageTk.PhotoImage(resized_film1Image)  # Maakt een PhotoImage-object van de verkleinde afbeelding
+        film1Label = tk.Label(self, image=self.film1Photo)  # Maakt een Label-widget met de afbeelding
+        film1Label.config(borderwidth=0)  # Stelt de randbreedte van het label in op 0
+        film1Label.place(x=165, y=180)  # Plaatst het label op de gewenste positie
 
         film2Image = Image.open("afbeeldingen/film2.png")
-        resized_film2Image = film2Image.resize((179, 254))  # Resize the image
+        resized_film2Image = film2Image.resize((179, 254))
         self.film2Photo = ImageTk.PhotoImage(resized_film2Image)
         film2Label = tk.Label(self, image=self.film2Photo)
         film2Label.config(borderwidth=0)
         film2Label.place(x=410, y=180)
 
         film3Image = Image.open("afbeeldingen/film3.png")
-        resized_film3Image = film3Image.resize((179, 254))  # Resize the image
+        resized_film3Image = film3Image.resize((179, 254))
         self.film3Photo = ImageTk.PhotoImage(resized_film3Image)
         film3Label = tk.Label(self, image=self.film3Photo)
         film3Label.config(borderwidth=0)
