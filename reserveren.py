@@ -71,7 +71,7 @@ class FilmsReservationApp(tk.Tk):
             time_choices.append("22:00")
 
         if time_choices:
-            self.selected_time.set(time_choices[0]) # Hier kiest de de eerst tijd die beschikbaar is
+            self.selected_time.set(time_choices[0]) # Hier kiest je de eerst tijd die beschikbaar is
             time_dropdown = OptionMenu(self, self.selected_time, *time_choices) # Hier maakt die de dropdown
         else:
             self.selected_time.set("No available time") # Hier geeft die aan dat er geen tijd beschikbaar is
