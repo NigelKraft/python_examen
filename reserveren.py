@@ -101,7 +101,7 @@ class FilmsReservationApp(tk.Tk):
                 messagebox.showinfo("Error", "No time available. Please come back later.")
             elif attendees_error:
                 messagebox.showinfo("Error", attendees_error)
-                self.selected_attendees.set("") #om de box te resetten
+                self.selected_attendees.set("1") #om de box te resetten naar 1
             else:
                 print("seats!")
 
