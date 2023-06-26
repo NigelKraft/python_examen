@@ -156,6 +156,13 @@ class Films1App(tk.Tk):
 
         button = tk.Button(self, text="Reserveren", command=self.button, **button_style)
         button.place(x=635, y=525, anchor=tk.CENTER)
+
+        back_button = tk.Button(self, text="Back", command=self.back_to_home, bg="#00368c", fg="#fcffff" )
+        back_button.place(x=620, y=580)
+
+    def back_to_home(self):
+        self.destroy()
+        FilmsApp()
     def button(self):
         Films1App.destroy(self)
         FilmsReservationApp()
@@ -224,6 +231,13 @@ class Films2App(tk.Tk):
         button = tk.Button(self, text="Reserveren", command=button, **button_style)
         button.place(x=645, y=525, anchor=tk.CENTER)
 
+        back_button = tk.Button(self, text="Back", command=self.back_to_home, bg="#800080", fg="#fcffff")
+        back_button.place(x=630, y=580)
+
+    def back_to_home(self):
+        self.destroy()
+        FilmsApp()
+
 class Films3App(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -288,6 +302,15 @@ class Films3App(tk.Tk):
 
         self.button = tk.Button(self, text="Reserveren", command=button, **button_style)
         self.button.place(x=655, y=525, anchor=tk.CENTER)
+
+        back_button = tk.Button(self, text="Back", command=self.back_to_home, bg="#BC1823", fg="#fcffff")
+        back_button.place(x=638, y=580)
+
+    def back_to_home(self):
+        self.destroy()
+        FilmsApp()
+
+
 
 class FilmsReservationApp(tk.Tk):
     def __init__(self):
