@@ -417,7 +417,7 @@ class FilmsReservationApp(tk.Tk):
         seats_button.place(x=378, y=500)
 
         back_button = tk.Button(self, text="Back", command=self.back_to_home, bg="#ED5EAB", fg="#fcffff")
-        back_button.place(x=460, y=580)
+        back_button.place(x=465, y=580)
 
     def back_to_home(self):
         self.destroy()
